@@ -1,9 +1,13 @@
+//Allows the sharejs package to access the document
+this.Documents = new Mongo.Collection("documents");
 if (Meteor.isClient) {
   
 }
 
 if (Meteor.isServer) {
   Meteor.startup(function () {
-    // code to run on server at startup
+    if(!Documents.findOne()){
+      Documents.insert({title: "New document"});
+    }
   });
 }
