@@ -4,10 +4,14 @@
 
 <body>
   <h1>Welcome to WriteCollabo!</h1>
-
+  {{> display_date}}
   {{> editor}}
 </body>
 
+<template name="display_date">
+  {{currentDate}}
+</template>
+
 <template name="editor">
-  
+  {{> sharejsAce docid=docid id="editor" onRender=config}}
 </template>

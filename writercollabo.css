@@ -1,1 +1,5 @@
 /* CSS declarations go here */
+#editor{
+	width: 480px;
+	height: 480px;
+}
